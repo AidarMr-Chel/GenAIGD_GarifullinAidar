@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "logs/gdd-log.md",
+                "file": "GDD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "gdd-log"
+              "title": "GDD"
             }
           }
         ]
@@ -196,12 +196,12 @@
   },
   "active": "ef8c0b5b85d122a0",
   "lastOpenFiles": [
+    "index.md",
     "GDD.md",
     "logs/gdd-log.md",
     "shots/shot-list.md",
     "shots",
     "README.md",
-    "index.md",
     "media/3d",
     "media/video",
     "media/audio",
