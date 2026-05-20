@@ -194,11 +194,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "de31def85333dc3c",
+  "active": "ef8c0b5b85d122a0",
   "lastOpenFiles": [
     "GDD.md",
     "logs/gdd-log.md",
+    "shots/shot-list.md",
+    "shots",
     "README.md",
+    "index.md",
     "media/3d",
     "media/video",
     "media/audio",
@@ -207,7 +210,6 @@
     "images/selected",
     "images",
     "workflows",
-    "reports",
-    "logs"
+    "reports"
   ]
 }
