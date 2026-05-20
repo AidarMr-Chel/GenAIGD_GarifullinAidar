@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "263850042f7761a0",
@@ -180,7 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 307.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,11 +194,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "410fb99816d6384b",
+  "active": "de31def85333dc3c",
   "lastOpenFiles": [
-    "README.md",
-    "logs/gdd-log.md",
     "GDD.md",
+    "logs/gdd-log.md",
+    "README.md",
     "media/3d",
     "media/video",
     "media/audio",
