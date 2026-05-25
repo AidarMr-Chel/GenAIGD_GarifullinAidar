@@ -8,15 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ef8c0b5b85d122a0",
+            "id": "01c9e0285550131a",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "images/selected/01-w05-style-a-01.png"
+                "file": "logs/workflow-notes.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "01-w05-style-a-01"
+              "icon": "lucide-file",
+              "title": "workflow-notes"
             }
           }
         ]
@@ -192,19 +194,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "410fb99816d6384b",
+  "active": "01c9e0285550131a",
   "lastOpenFiles": [
+    "images/raw/04-w06-hero-costume.png",
+    "images/selected/04-w06-hero-light.png",
+    "images/raw/02-w06-hero-emotion.png",
+    "images/raw/01-w06-hero-base.png",
+    "images/selected/photo_2026-05-21_11-29-15.jpg",
+    "images/raw/photo_2026-05-21_11-29-18.jpg",
+    "images/raw/photo_2026-05-21_11-29-17.jpg",
+    "images/selected/photo_2026-05-21_11-29-17.jpg",
+    "images/selected/photo_2026-05-21_11-29-18.jpg",
+    "images/selected/01-w05-style-a-01.png",
     "workflows/w06_multiprompt.json",
     "images/selected/06-w06-hero-state.png",
-    "images/selected/02-w06-hero-emotion.png",
-    "images/selected/01-w06-hero-base.png",
-    "images/selected/SD1.5_00108_.png",
-    "images/selected/04-w06-hero-costume.png",
-    "images/selected/03-w06-hero-shot.png",
-    "images/selected/05-w06-hero-light.png",
-    "images/selected/SD1.5_00107_.png",
-    "images/selected/06-w05-style-b-03.png",
-    "images/selected/05-w05-style-b-02.png",
     "style/style-bible.md",
     "logs/workflow-notes.md",
     "refs/location.md",
@@ -227,7 +230,6 @@
     "index.md",
     "shots",
     "README.md",
-    "media/3d",
-    "media/video"
+    "media/3d"
   ]
 }
