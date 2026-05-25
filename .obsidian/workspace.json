@@ -11,14 +11,12 @@
             "id": "ef8c0b5b85d122a0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "GDD.md",
-                "mode": "source",
-                "source": false
+                "file": "images/selected/01-w05-style-a-01.png"
               },
-              "icon": "lucide-file",
-              "title": "GDD"
+              "icon": "lucide-image",
+              "title": "01-w05-style-a-01"
             }
           }
         ]
@@ -194,21 +192,30 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ef8c0b5b85d122a0",
+  "active": "410fb99816d6384b",
   "lastOpenFiles": [
-    "images/selected/05-w05-style-b-02.png",
-    "images/selected/03-w05-style-a-03.png",
-    "images/selected/02-w05-style-a-02.png",
+    "workflows/w06_multiprompt.json",
+    "images/selected/06-w06-hero-state.png",
+    "images/selected/02-w06-hero-emotion.png",
+    "images/selected/01-w06-hero-base.png",
+    "images/selected/SD1.5_00108_.png",
+    "images/selected/04-w06-hero-costume.png",
+    "images/selected/03-w06-hero-shot.png",
+    "images/selected/05-w06-hero-light.png",
+    "images/selected/SD1.5_00107_.png",
     "images/selected/06-w05-style-b-03.png",
-    "images/selected/04-w05-style-b-01.png",
-    "images/selected/01-w05-style-a-01.png",
-    "images/selected/07-w05-style-baseline-01.png",
+    "images/selected/05-w05-style-b-02.png",
     "style/style-bible.md",
     "logs/workflow-notes.md",
+    "refs/location.md",
+    "GDD.md",
+    "characters/hero.md",
+    "refs/character.md",
+    "characters",
+    "design/constants.md",
+    "design",
     "logs/prompt-plan.md",
     "logs/gdd-log.md",
-    "GDD.md",
-    "refs/character.md",
     "assets/asset-list.md",
     "refs",
     "asset-list.md",
@@ -217,16 +224,10 @@
     "style",
     "workflows/w04_sdxl_txt2img.json",
     "workflows/default.json",
-    "images/selected/photo_2026-05-21_11-29-15.jpg",
-    "images/selected/photo_2026-05-21_11-29-17.jpg",
-    "images/selected/photo_2026-05-21_11-29-18.jpg",
-    "images/selected/photo_2026-05-21_11-29-13.jpg",
     "index.md",
     "shots",
     "README.md",
     "media/3d",
-    "media/video",
-    "media/audio",
-    "media"
+    "media/video"
   ]
 }
