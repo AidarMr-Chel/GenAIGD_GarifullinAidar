@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GDD.md",
+                "file": "refs/ip-adapter.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GDD"
+              "title": "ip-adapter"
             }
           }
         ]
@@ -194,28 +194,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "de31def85333dc3c",
+  "active": "01c9e0285550131a",
   "lastOpenFiles": [
-    "workflows/w07_img2img_inpaint_outpaint (3).json",
-    "images/selected/w07_inpaint_after_00019_.png",
-    "images/selected/w07_img2img_after_00007_.png",
-    "images/selected/mask3.png",
-    "images/selected/w07_outpaint_after_00012_.png",
-    "refs/controlnet.md",
-    "refs/character.md",
+    "images/raw/01-w05-style-a-01.png",
+    "images/raw/w07_inpaint_after_00019_.png",
+    "images/raw/photo_2026-05-21_11-29-13.jpg",
+    "images/raw/mask3.png",
+    "images/raw/07-w05-style-baseline-01.png",
+    "images/raw/06-w05-style-b-03.png",
+    "images/raw/05-w05-style-b-02.png",
+    "images/raw/04-w06-hero-light.png",
+    "images/raw/03-w05-style-a-03.png",
+    "images/raw/02-w05-style-a-02.png",
+    "images/selected/08-canny-scene-01.png",
+    "workflows/w08_controlnet_depth_canny.json",
+    "characters/hero.md",
+    "refs/ip-adapter.md",
     "shots/shot-list.md",
     "logs/workflow-notes.md",
-    "images/raw/04-w06-hero-costume.png",
-    "images/selected/04-w06-hero-light.png",
-    "images/raw/02-w06-hero-emotion.png",
-    "images/raw/01-w06-hero-base.png",
-    "images/selected/photo_2026-05-21_11-29-15.jpg",
-    "images/raw/photo_2026-05-21_11-29-18.jpg",
+    "GDD.md",
+    "workflows/w07_img2img_inpaint_outpaint (3).json",
+    "refs/controlnet.md",
+    "refs/character.md",
     "workflows/w06_multiprompt.json",
     "style/style-bible.md",
     "refs/location.md",
-    "GDD.md",
-    "characters/hero.md",
     "characters",
     "design/constants.md",
     "design",
@@ -229,8 +232,6 @@
     "workflows/w04_sdxl_txt2img.json",
     "workflows/default.json",
     "index.md",
-    "shots",
-    "README.md",
-    "media/3d"
+    "README.md"
   ]
 }
