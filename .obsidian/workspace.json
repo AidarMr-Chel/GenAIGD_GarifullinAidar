@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "refs/ip-adapter.md",
+                "file": "logs/workflow-notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ip-adapter"
+              "title": "workflow-notes"
             }
           }
         ]
@@ -196,28 +196,28 @@
   },
   "active": "01c9e0285550131a",
   "lastOpenFiles": [
-    "images/raw/01-w05-style-a-01.png",
-    "images/raw/w07_inpaint_after_00019_.png",
-    "images/raw/photo_2026-05-21_11-29-13.jpg",
-    "images/raw/mask3.png",
-    "images/raw/07-w05-style-baseline-01.png",
-    "images/raw/06-w05-style-b-03.png",
-    "images/raw/05-w05-style-b-02.png",
-    "images/raw/04-w06-hero-light.png",
-    "images/raw/03-w05-style-a-03.png",
-    "images/raw/02-w05-style-a-02.png",
-    "images/selected/08-canny-scene-01.png",
+    "images/selected/w09-flux2-klein-demo.png",
+    "images/selected/w09-moodshot-memory-archive.png",
+    "images/selected/w09-upscale-candidate-architecture.png",
+    "images/selected/w09-upscale-candidate-character.png",
+    "images/selected/w09-ipadapter-demo.png",
+    "images/raw/w07_outpaint_after_00012_.png",
+    "images/raw/w07_img2img_after_00007_.png",
+    "images/raw/photo_2026-05-21_11-29-15.jpg",
+    "images/raw/08-depth-scene-01.png",
+    "images/raw/08-canny-scene-01.png",
+    "images/raw/06-w06-hero-state.png",
+    "GDD.md",
+    "logs/workflow-notes.md",
+    "style/style-bible.md",
+    "refs/ip-adapter.md",
     "workflows/w08_controlnet_depth_canny.json",
     "characters/hero.md",
-    "refs/ip-adapter.md",
     "shots/shot-list.md",
-    "logs/workflow-notes.md",
-    "GDD.md",
     "workflows/w07_img2img_inpaint_outpaint (3).json",
     "refs/controlnet.md",
     "refs/character.md",
     "workflows/w06_multiprompt.json",
-    "style/style-bible.md",
     "refs/location.md",
     "characters",
     "design/constants.md",
