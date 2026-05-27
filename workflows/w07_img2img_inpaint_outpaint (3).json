@@ -1,0 +1,1076 @@
+{
+  "id": "w07_img2img_inpaint_outpaint",
+  "revision": 0,
+  "last_node_id": 18,
+  "last_link_id": 33,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "VAEDecode",
+      "pos": [
+        280,
+        170
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 10
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 8,
+      "type": "SaveImage",
+      "pos": [
+        560,
+        160
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [],
+      "title": "save_img2img_after",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "w07_img2img_after"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "VAEDecode",
+      "pos": [
+        280,
+        540
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 19
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 14,
+      "type": "ImagePadForOutpaint",
+      "pos": [
+        -760,
+        920
+      ],
+      "size": [
+        315,
+        174
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "title": "outpaint_expand_sides",
+      "properties": {
+        "Node name for S&R": "ImagePadForOutpaint"
+      },
+      "widgets_values": [
+        256,
+        256,
+        80,
+        120,
+        24
+      ]
+    },
+    {
+      "id": 15,
+      "type": "VAEEncodeForInpaint",
+      "pos": [
+        -380,
+        940
+      ],
+      "size": [
+        260,
+        98
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 24
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 20
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncodeForInpaint"
+      },
+      "widgets_values": [
+        12
+      ]
+    },
+    {
+      "id": 17,
+      "type": "VAEDecode",
+      "pos": [
+        280,
+        920
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 27
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 18,
+      "type": "SaveImage",
+      "pos": [
+        560,
+        910
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 28
+        }
+      ],
+      "outputs": [],
+      "title": "save_outpaint_after",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "w07_outpaint_after"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "SaveImage",
+      "pos": [
+        593.3679572660221,
+        527.3180360417035
+      ],
+      "size": [
+        273.5491840519737,
+        282
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [],
+      "title": "save_inpaint_after",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "w07_inpaint_after"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "VAEEncode",
+      "pos": [
+        -361.1372118551045,
+        215.80826930113435
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 2,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -420,
+        -220
+      ],
+      "size": [
+        400,
+        180
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            5,
+            13,
+            21
+          ]
+        }
+      ],
+      "title": "positive_archive_style",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "replace background with industrial sci-fi environment, \nbrutalist concrete walls, amber lighting, \nsoft shadows, consistent orthographic projection, \nclean technical concept art style, \nno perspective distortion, high readability\n"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -420,
+        0
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            6,
+            14,
+            22
+          ]
+        }
+      ],
+      "title": "negative_style_breaks",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "neon colors, glossy plastic, cartoon style, \nanime, fantasy scenery, organic shapes, \nblur, text, watermark, distorted edges\n"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "LoadImage",
+      "pos": [
+        -760,
+        520
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "title": "inpaint_source_with_mask",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "mask3.png",
+        "image"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [
+        -760,
+        140
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7,
+            33
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "img2img_source",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "02-w06-hero-emotion.png",
+        "image"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "VAEEncodeForInpaint",
+      "pos": [
+        -383.6626992774375,
+        555.1113167328185
+      ],
+      "size": [
+        260,
+        98
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 33
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 20
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "title": "inpaint_foreground_shard_mask",
+      "properties": {
+        "Node name for S&R": "VAEEncodeForInpaint"
+      },
+      "widgets_values": [
+        6
+      ]
+    },
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -1000.1614541835532,
+        -154.30877916907906
+      ],
+      "size": [
+        315,
+        98
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1,
+            9,
+            17
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            2,
+            3
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            4,
+            12,
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_turbo_1.0_fp16.safetensors"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "KSampler",
+      "pos": [
+        -80,
+        900
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 17
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 21
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 22
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "title": "outpaint_sampler",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        24071377,
+        "fixed",
+        10,
+        5,
+        "euler_ancestral",
+        "karras",
+        0.86
+      ]
+    },
+    {
+      "id": 11,
+      "type": "KSampler",
+      "pos": [
+        -90.66621803748666,
+        549.332099603088
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 9
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 13
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 14
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "title": "inpaint_sampler",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        24071377,
+        "fixed",
+        10,
+        5,
+        "euler_ancestral",
+        "karras",
+        0.72
+      ]
+    },
+    {
+      "id": 6,
+      "type": "KSampler",
+      "pos": [
+        -56.94548115623896,
+        170.47932674716407
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 5
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 6
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "title": "img2img_sampler_denoise_055",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        24071377,
+        "fixed",
+        10,
+        5,
+        "euler_ancestral",
+        "karras",
+        0.55
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      6,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      1,
+      1,
+      2,
+      0,
+      "CLIP"
+    ],
+    [
+      3,
+      1,
+      1,
+      3,
+      0,
+      "CLIP"
+    ],
+    [
+      4,
+      1,
+      2,
+      5,
+      1,
+      "VAE"
+    ],
+    [
+      5,
+      2,
+      0,
+      6,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      6,
+      3,
+      0,
+      6,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      7,
+      4,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      8,
+      5,
+      0,
+      6,
+      3,
+      "LATENT"
+    ],
+    [
+      9,
+      1,
+      0,
+      11,
+      0,
+      "MODEL"
+    ],
+    [
+      10,
+      6,
+      0,
+      7,
+      0,
+      "LATENT"
+    ],
+    [
+      11,
+      7,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      1,
+      2,
+      7,
+      1,
+      "VAE"
+    ],
+    [
+      13,
+      2,
+      0,
+      11,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      14,
+      3,
+      0,
+      11,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      16,
+      9,
+      1,
+      10,
+      2,
+      "MASK"
+    ],
+    [
+      17,
+      1,
+      0,
+      16,
+      0,
+      "MODEL"
+    ],
+    [
+      18,
+      10,
+      0,
+      11,
+      3,
+      "LATENT"
+    ],
+    [
+      19,
+      11,
+      0,
+      12,
+      0,
+      "LATENT"
+    ],
+    [
+      20,
+      1,
+      2,
+      10,
+      1,
+      "VAE"
+    ],
+    [
+      21,
+      2,
+      0,
+      16,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      22,
+      3,
+      0,
+      16,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      23,
+      12,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      14,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      14,
+      1,
+      15,
+      2,
+      "MASK"
+    ],
+    [
+      26,
+      15,
+      0,
+      16,
+      3,
+      "LATENT"
+    ],
+    [
+      27,
+      16,
+      0,
+      17,
+      0,
+      "LATENT"
+    ],
+    [
+      28,
+      17,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      33,
+      4,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "img2img denoise tests: 0.35 / 0.55 / 0.75",
+      "bounding": [
+        -800,
+        100,
+        1400,
+        360
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "inpaint: foreground memory shard repair",
+      "bounding": [
+        -800,
+        500,
+        1400,
+        340
+      ],
+      "color": "#8a6f3d",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "outpaint: extend left/right + foreground",
+      "bounding": [
+        -800,
+        880,
+        1400,
+        340
+      ],
+      "color": "#7a4f8f",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "w07_notes": {
+      "source_frame": "outputs/selected/hw4/02-w04-location-archive-hub.png",
+      "selected_outputs": "outputs/selected/hw7/",
+      "denoise_tests": [
+        0.35,
+        0.55,
+        0.75
+      ],
+      "chosen_img2img_denoise": 0.55,
+      "inpaint_zone": "lower-right foreground memory shard / noisy lamp area",
+      "outpaint_direction": "left and right expansion, slight foreground expansion"
+    },
+    "ds": {
+      "scale": 0.6985658694134248,
+      "offset": [
+        993.2920471592327,
+        248.5119331224242
+      ]
+    },
+    "frontendVersion": "1.43.18"
+  },
+  "version": 0.4
+}

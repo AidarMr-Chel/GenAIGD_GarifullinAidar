@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "logs/workflow-notes.md",
+                "file": "GDD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "workflow-notes"
+              "title": "GDD"
             }
           }
         ]
@@ -194,26 +194,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "01c9e0285550131a",
+  "active": "de31def85333dc3c",
   "lastOpenFiles": [
+    "workflows/w07_img2img_inpaint_outpaint (3).json",
+    "images/selected/w07_inpaint_after_00019_.png",
+    "images/selected/w07_img2img_after_00007_.png",
+    "images/selected/mask3.png",
+    "images/selected/w07_outpaint_after_00012_.png",
+    "refs/controlnet.md",
+    "refs/character.md",
+    "shots/shot-list.md",
+    "logs/workflow-notes.md",
     "images/raw/04-w06-hero-costume.png",
     "images/selected/04-w06-hero-light.png",
     "images/raw/02-w06-hero-emotion.png",
     "images/raw/01-w06-hero-base.png",
     "images/selected/photo_2026-05-21_11-29-15.jpg",
     "images/raw/photo_2026-05-21_11-29-18.jpg",
-    "images/raw/photo_2026-05-21_11-29-17.jpg",
-    "images/selected/photo_2026-05-21_11-29-17.jpg",
-    "images/selected/photo_2026-05-21_11-29-18.jpg",
-    "images/selected/01-w05-style-a-01.png",
     "workflows/w06_multiprompt.json",
-    "images/selected/06-w06-hero-state.png",
     "style/style-bible.md",
-    "logs/workflow-notes.md",
     "refs/location.md",
     "GDD.md",
     "characters/hero.md",
-    "refs/character.md",
     "characters",
     "design/constants.md",
     "design",
@@ -223,7 +225,6 @@
     "refs",
     "asset-list.md",
     "assets",
-    "shots/shot-list.md",
     "style",
     "workflows/w04_sdxl_txt2img.json",
     "workflows/default.json",

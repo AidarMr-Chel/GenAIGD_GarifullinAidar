@@ -55,3 +55,64 @@
 - Light = **soft amber**  
 - Shot = **mid top‑down**  
 - Glitch = **0.45** для зеркальной формы  
+
+## Шаг 1. Img2img test — стабилизация исходного кадра
+
+**Контекст:**
+Исходный кадр — инженерный костюм (02-w06-hero-emotion.png).  
+Проблема: плоский свет и слабая читаемость формы.  
+Цель: усилить объём и материал без разрушения композиции.
+
+**Что фиксировали:**
+- Модель: SDXL Lightning 8step  
+- Workflow: w07_img2img_inpaint_outpaint.json  
+- Seed: 24071377  
+- Denoise тесты: 0.35 / 0.55 / 0.75  
+- Выбранный вариант: 0.55
+
+**Что меняли:**
+- Denoise = 0.55  
+- Positive prompt: industrial sci-fi engineer suit concept art  
+- Negative prompt: neon, glossy plastic, cartoon style
+
+**Вывод:**
+При 0.55 улучшилась читаемость металла и свет, сохранился силуэт.  
+При 0.75 появились артефакты и потеря деталей.  
+Оставляем 0.55 как baseline.
+
+## Шаг 2. Inpaint test — замена фона
+
+**Контекст:**
+Использована маска `mask3.png` (фон белый, персонаж чёрный).  
+Проблема: фон слишком нейтральный, не поддерживает технический стиль.  
+Цель: заменить фон на индустриальный интерьер.
+
+**Что фиксировали:**
+- Модель: SDXL Lightning 8step  
+- Workflow: w07_img2img_inpaint_outpaint.json  
+- Denoise: 0.75  
+- Positive prompt: replace background with industrial sci-fi environment  
+- Negative prompt: neon colors, glossy plastic, cartoon style
+
+**Вывод:**
+Фон заменён на индустриальный интерьер с потолочными панелями и бетонными стенами.  
+Персонажи остались нетронутыми, освещение согласовано.  
+Маска сработала корректно.
+
+## Шаг 3. Outpaint test — расширение сцены
+
+**Контекст:**
+Исходный кадр после inpaint.  
+Проблема: тесная композиция, нет архитектурного контекста.  
+Цель: расширить сцену влево и вверх, добавить глубину.
+
+**Что фиксировали:**
+- Модель: SDXL Lightning 8step  
+- Workflow: w07_img2img_inpaint_outpaint.json  
+- Denoise: 0.86  
+- Positive prompt: extend industrial sci-fi environment  
+- Negative prompt: neon purple, fantasy scenery, organic shapes
+
+**Вывод:**
+Композиция расширена, появились потолочные панели и архитектурные детали.  
+Сцена стала более пространственной, сохранив технический стиль.
